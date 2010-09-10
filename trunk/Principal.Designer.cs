@@ -32,11 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.wMediaPlayer = new AxWMPLib.AxWindowsMediaPlayer();
             this.notIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.ctxMenu = new System.Windows.Forms.ContextMenu();
-            this.menuItem1 = new System.Windows.Forms.MenuItem();
-            this.menuItem2 = new System.Windows.Forms.MenuItem();
-            this.menuItem3 = new System.Windows.Forms.MenuItem();
-            this.menuItem4 = new System.Windows.Forms.MenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.wMediaPlayer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,38 +51,6 @@
             this.notIcon.Text = "OnLineRadioTunner";
             this.notIcon.Visible = true;
             // 
-            // ctxMenu
-            // 
-            this.ctxMenu.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem1,
-            this.menuItem3});
-            // 
-            // menuItem1
-            // 
-            this.menuItem1.Index = 0;
-            this.menuItem1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem2});
-            this.menuItem1.Text = "Radio Marca";
-            // 
-            // menuItem2
-            // 
-            this.menuItem2.Index = 0;
-            this.menuItem2.Text = "Sevilla";
-            this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
-            // 
-            // menuItem3
-            // 
-            this.menuItem3.Index = 1;
-            this.menuItem3.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem4});
-            this.menuItem3.Text = "Onda Cero";
-            // 
-            // menuItem4
-            // 
-            this.menuItem4.Index = 0;
-            this.menuItem4.Text = "Sevilla";
-            this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,11 +69,6 @@
 
         private AxWMPLib.AxWindowsMediaPlayer wMediaPlayer;
         private System.Windows.Forms.NotifyIcon notIcon;
-        private System.Windows.Forms.ContextMenu ctxMenu;
-        private System.Windows.Forms.MenuItem menuItem1;
-        private System.Windows.Forms.MenuItem menuItem2;
-        private System.Windows.Forms.MenuItem menuItem3;
-        private System.Windows.Forms.MenuItem menuItem4;
     }
 }
 
