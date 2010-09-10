@@ -12,6 +12,7 @@
     <AssemblyName>OnlineRadioTunner</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>radio.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -98,6 +99,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="radio.ico" />
     <Content Include="rstation.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

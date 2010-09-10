@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OnlineRadioTunner xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Groups>
+    <RadioStationGroup>
+      <Name>Onda Cero</Name>
+      <Stations>
+        <RadioStation>
+          <Name>OC - Sevilla</Name>
+          <Url>mms://ondacerolivewm.fplive.net/ondacerowmlive-live/oc_sevilla</Url>
+        </RadioStation>
+        <RadioStation>
+          <Name>OC - Almeria</Name>
+          <Url>mms://ondacerolivewm.fplive.net/ondacerowmlive-live/oc_almeria</Url>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
+    <RadioStationGroup>
+      <Name>Marca</Name>
+      <Stations>
+        <RadioStation>
+          <Name>M - Sevilla</Name>
+          <Url>mms://reflector.marca.com:9054</Url>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
+    <RadioStationGroup>
+      <Name>Canal Sur Radio</Name>
+      <Stations>
+        <RadioStation>
+          <Name>CSR</Name>
+          <Url>http://canalsurradio.rtva.stream.flumotion.com/rtva/canalsurradio_master.mp3.m3u</Url>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
+    <RadioStationGroup>
+      <Name>Rock and Gol</Name>
+      <Stations>
+        <RadioStation>
+          <Name>R&amp;G</Name>
+          <Url>http://rockandgol.cope.stream.flumotion.com/cope/rockandgol.asf.asx</Url>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
+  </Groups>
+</OnlineRadioTunner>
