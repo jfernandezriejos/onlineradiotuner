@@ -54,7 +54,7 @@ namespace OnlineRadioTunner
             OnlineRadioTunnerSystem system = (OnlineRadioTunnerSystem)serializer.Deserialize(r); 
 
             Principal pfrm = new Principal(system);
-            Application.Run();
+            Application.Run(/*pfrm*/);
         }
     }
 }
