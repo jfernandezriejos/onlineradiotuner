@@ -41,5 +41,34 @@
         </RadioStation>
       </Stations>
     </RadioStationGroup>
+    <RadioStationGroup>
+      <Name>RNE</Name>
+      <Stations>
+        <RadioStation>
+          <Name>Radio Nacional</Name>
+          <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3348_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+        </RadioStation>
+        <RadioStation>
+          <Name>Radio Clásica</Name>
+          <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3343_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+        </RadioStation>
+        <RadioStation>
+          <Name>Radio 3</Name>
+          <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3342_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+        </RadioStation>
+        <RadioStation>
+          <Name>Radio 4</Name>
+          <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3344_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+        </RadioStation>
+        <RadioStation>
+          <Name>Radio 5 Todo Noticias</Name>
+          <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3345_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+        </RadioStation>
+        <RadioStation>
+          <Name>Radio Exterior</Name>
+          <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3346_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
   </Groups>
 </OnlineRadioTunner>
