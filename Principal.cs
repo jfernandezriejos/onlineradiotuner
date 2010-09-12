@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+//http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf
+
 namespace OnlineRadioTunner
 {
     public partial class Principal : Form
@@ -16,6 +18,9 @@ namespace OnlineRadioTunner
         public Principal(OnlineRadioTunnerSystem system)
         {
             InitializeComponent();
+
+            //fls_player.FlashVars = "assetID=3348_es_audios&location=radio&volume=0.75";
+            //fls_player.Movie = "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf";
            
             
             //notIcon.ContextMenu = ctxMenu;
