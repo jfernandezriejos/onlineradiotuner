@@ -18,8 +18,28 @@
       <Name>Marca</Name>
       <Stations>
         <RadioStation>
+          <Name>M - Nacional</Name>
+          <Url>mms://reflector.marca.com:9050</Url>
+        </RadioStation>
+        <RadioStation>
+          <Name>M - Madrid</Name>
+          <Url>mms://reflector.marca.com:9051</Url>
+        </RadioStation>
+        <RadioStation>
+          <Name>M - A Coruña</Name>
+          <Url>mms://reflector.marca.com:9055</Url>
+        </RadioStation>
+        <RadioStation>
+          <Name>M - Barcelona</Name>
+          <Url>mms://reflector.marca.com:9052</Url>
+        </RadioStation>
+        <RadioStation>
           <Name>M - Sevilla</Name>
           <Url>mms://reflector.marca.com:9054</Url>
+        </RadioStation>
+		    <RadioStation>
+          <Name>M - Vigo</Name>
+          <Url>mms://reflector.marca.com:9056</Url>
         </RadioStation>
       </Stations>
     </RadioStationGroup>
