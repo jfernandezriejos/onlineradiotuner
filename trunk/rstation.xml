@@ -14,6 +14,15 @@
         </RadioStation>
       </Stations>
     </RadioStationGroup>
+	<RadioStationGroup>
+      <Name>Cadena Ser</Name>
+      <Stations>
+        <RadioStation>
+          <Name>CS - Sevilla</Name>
+          <Url>http://194.169.201.177:8085/stream/prisacom_Sevilla</Url>
+        </RadioStation>        
+      </Stations>
+    </RadioStationGroup>
     <RadioStationGroup>
       <Name>Marca</Name>
       <Stations>
