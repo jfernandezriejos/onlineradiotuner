@@ -21,7 +21,7 @@
         }
 
         #region Windows Form Designer generated code
-
+        
         /// <summary>
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
@@ -50,6 +50,7 @@
             this.notIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notIcon.Icon")));
             this.notIcon.Text = "OnLineRadioTunner";
             this.notIcon.Visible = true;
+            this.notIcon.MouseClick += new System.Windows.Forms.MouseEventHandler(this.notIcon_MouseClick);
             // 
             // Principal
             // 

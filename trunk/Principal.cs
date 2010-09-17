@@ -28,6 +28,8 @@ namespace OnlineRadioTunner
         {
             ContextMenu menu = new ContextMenu();
 
+           
+
             foreach (RadioStationGroup grp in system.Groups)
             {
                 // creamos el primer nivel de menu
@@ -68,7 +70,7 @@ namespace OnlineRadioTunner
         private void wMediaPlayer_StatusChange(object sender, EventArgs e)
         {
             AxWMPLib.AxWindowsMediaPlayer wmp = (AxWMPLib.AxWindowsMediaPlayer)sender;
-            notIcon.ShowBalloonTip(30000000, "Emisora", wmp.status, ToolTipIcon.Info);
+            notIcon.ShowBalloonTip(10, "Emisora", wmp.status, ToolTipIcon.Info);
         }
 
         private void change_radio_station(object sender, EventArgs e)
@@ -85,6 +87,13 @@ namespace OnlineRadioTunner
             }
         }
 
+        private void mute_click(object sender, EventArgs e)
+        {
+            wMediaPlayer.settings.mute = !wMediaPlayer.settings.mute;
+        }
+
+
+
         private void salir_click(object sender, EventArgs e)
         {
             if (notIcon != null)
@@ -93,6 +102,26 @@ namespace OnlineRadioTunner
             }
             
             Application.Exit();
+        }
+
+        private void notIcon_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                wMediaPlayer.settings.mute = !wMediaPlayer.settings.mute;
+
+                if (wMediaPlayer.settings.mute)
+                {
+                    notIcon.Icon = new System.Drawing.Icon("radiomute.ico");
+                }
+                else 
+                {
+                    notIcon.Icon = new System.Drawing.Icon("radio.ico");
+                }
+
+                
+
+            }
         }
     }
 }
