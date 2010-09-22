@@ -50,6 +50,15 @@
         </RadioStation>
       </Stations>
     </RadioStationGroup>
+	 <RadioStationGroup>
+      <Name>Europa FM</Name>
+      <Stations>
+        <RadioStation>
+          <Name>EFM</Name>
+          <Url>http://www.europafm.com/EuropaFM/swf/PlayerEFM-OSMF.swf?var1=http://www.antena3.com/player/europafm_streams.xml</Url>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
     <RadioStationGroup>
       <Name>RNE</Name>
       <Stations>
