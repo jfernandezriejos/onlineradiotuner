@@ -50,6 +50,15 @@
         </RadioStation>
       </Stations>
     </RadioStationGroup>
+	<RadioStationGroup>
+		<Name>Cadena100</Name>
+			<Stations>
+				<RadioStation>
+					<Name>C100</Name>
+					<Url>http://cadena100.cope.stream.flumotion.com/cope/cadena100.flv.m3u</Url>
+				</RadioStation>
+			</Stations>
+	</RadioStationGroup>
 	 <RadioStationGroup>
       <Name>Europa FM</Name>
       <Stations>
