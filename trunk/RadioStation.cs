@@ -6,21 +6,27 @@ using System.Xml.Serialization;
 
 namespace OnlineRadioTunner
 {
-    
+    public enum StationType
+    { 
+        FLASH, 
+        WMP
+    }
     
     [XmlRoot(ElementName="RadioStation")]
     public class RadioStation
     {
-        public String Name { get; set; }
-        public String Url { get; set; }
+        public String       Name { get; set; }
+        public String       Url { get; set; }
+        public StationType  Type { get; set; }
 
         public RadioStation()
         { }
 
-        public RadioStation(String name, String url)
+        public RadioStation(String name, String url, StationType type)
         {
             Name = name;
             Url = url;
+            Type = type;
         }
     }
 

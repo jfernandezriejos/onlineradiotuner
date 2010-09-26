@@ -11,7 +11,7 @@ namespace OnlineRadioTunner
 {
     public partial class Principal : Form
     {
-        private Dictionary<IntPtr, String> map_id_url = new Dictionary<IntPtr, string>();
+        private Dictionary<IntPtr, RadioStation> map_id_station = new Dictionary<IntPtr, RadioStation>();
         
         public Principal(OnlineRadioTunnerSystem system)
         {
@@ -28,8 +28,6 @@ namespace OnlineRadioTunner
         {
             ContextMenu menu = new ContextMenu();
 
-           
-
             foreach (RadioStationGroup grp in system.Groups)
             {
                 // creamos el primer nivel de menu
@@ -41,7 +39,7 @@ namespace OnlineRadioTunner
                 {
                     // añadimos el evento
                     itm.Click += new EventHandler(change_radio_station);
-                    map_id_url[itm.Handle] = grp.Stations[0].Url;
+                    map_id_station[itm.Handle] = grp.Stations[0];
                 }
                 else
                 {
@@ -51,7 +49,7 @@ namespace OnlineRadioTunner
                     {
                         itm_arr[i] = new MenuItem(rstn.Name);
                         itm_arr[i].Click += new EventHandler(change_radio_station);
-                        map_id_url[itm_arr[i].Handle] = rstn.Url; 
+                        map_id_station[itm_arr[i].Handle] = rstn; 
                         ++i;
                     }
 
@@ -76,14 +74,23 @@ namespace OnlineRadioTunner
         private void change_radio_station(object sender, EventArgs e)
         {
             MenuItem itm = (MenuItem) sender;
-            String url;
-            if(map_id_url.TryGetValue(itm.Handle, out url))
+            RadioStation rst;
+            if (map_id_station.TryGetValue(itm.Handle, out rst))
             {
-                wMediaPlayer.URL = url;
+                switch (rst.Type)
+                {
+                    case StationType.WMP:
+                        wMediaPlayer.URL = rst.Url;
+                        break;
+                    case StationType.FLASH:
+                        flsh_player.Movie = rst.Url;
+                        flsh_player.Play();
+                        break;
+                }
             }
             else
             {
-                MessageBox.Show("No se encontro la dirección de la emisora "+ itm.Name, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("No se encontro la dirección de la emisora " + rst.Name, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -122,6 +129,12 @@ namespace OnlineRadioTunner
                 
 
             }
+        }
+
+        private void flsh_player_OnReadyStateChange(object sender, AxShockwaveFlashObjects._IShockwaveFlashEvents_OnReadyStateChangeEvent e)
+        {
+            int i = 0;
+            ++i;
         }
     }
 }
