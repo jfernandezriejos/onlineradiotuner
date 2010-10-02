@@ -7,20 +7,13 @@
         <RadioStation>
           <Name>OC - Sevilla</Name>
           <Url>mms://ondacerolivewm.fplive.net/ondacerowmlive-live/oc_sevilla</Url>
+          <Type>WMP</Type>
         </RadioStation>
         <RadioStation>
           <Name>OC - Almeria</Name>
           <Url>mms://ondacerolivewm.fplive.net/ondacerowmlive-live/oc_almeria</Url>
+          <Type>WMP</Type>
         </RadioStation>
-      </Stations>
-    </RadioStationGroup>
-	<RadioStationGroup>
-      <Name>Cadena Ser</Name>
-      <Stations>
-        <RadioStation>
-          <Name>CS - Sevilla</Name>
-          <Url>http://194.169.201.177:8085/stream/prisacom_Sevilla</Url>
-        </RadioStation>        
       </Stations>
     </RadioStationGroup>
     <RadioStationGroup>
@@ -29,6 +22,7 @@
         <RadioStation>
           <Name>M - Sevilla</Name>
           <Url>mms://reflector.marca.com:9054</Url>
+          <Type>WMP</Type>
         </RadioStation>
       </Stations>
     </RadioStationGroup>
@@ -38,6 +32,7 @@
         <RadioStation>
           <Name>CSR</Name>
           <Url>http://canalsurradio.rtva.stream.flumotion.com/rtva/canalsurradio_master.mp3.m3u</Url>
+          <Type>WMP</Type>
         </RadioStation>
       </Stations>
     </RadioStationGroup>
@@ -47,24 +42,7 @@
         <RadioStation>
           <Name>R&amp;G</Name>
           <Url>http://rockandgol.cope.stream.flumotion.com/cope/rockandgol.asf.asx</Url>
-        </RadioStation>
-      </Stations>
-    </RadioStationGroup>
-	<RadioStationGroup>
-		<Name>Cadena100</Name>
-			<Stations>
-				<RadioStation>
-					<Name>C100</Name>
-					<Url>http://cadena100.cope.stream.flumotion.com/cope/cadena100.flv.m3u</Url>
-				</RadioStation>
-			</Stations>
-	</RadioStationGroup>
-	 <RadioStationGroup>
-      <Name>Europa FM</Name>
-      <Stations>
-        <RadioStation>
-          <Name>EFM</Name>
-          <Url>http://www.europafm.com/EuropaFM/swf/PlayerEFM-OSMF.swf?var1=http://www.antena3.com/player/europafm_streams.xml</Url>
+          <Type>WMP</Type>
         </RadioStation>
       </Stations>
     </RadioStationGroup>
@@ -74,26 +52,82 @@
         <RadioStation>
           <Name>Radio Nacional</Name>
           <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3348_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+          <Type>FLASH</Type>
         </RadioStation>
         <RadioStation>
           <Name>Radio Clásica</Name>
           <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3343_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+          <Type>FLASH</Type>
         </RadioStation>
         <RadioStation>
           <Name>Radio 3</Name>
           <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3342_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+          <Type>FLASH</Type>
         </RadioStation>
         <RadioStation>
           <Name>Radio 4</Name>
           <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3344_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+          <Type>FLASH</Type>
         </RadioStation>
         <RadioStation>
           <Name>Radio 5 Todo Noticias</Name>
           <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3345_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+          <Type>FLASH</Type>
         </RadioStation>
         <RadioStation>
           <Name>Radio Exterior</Name>
           <Url>http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3346_es_audios&amp;location=radio&amp;volume=0.75&amp;autostart=true</Url>
+          <Type>FLASH</Type>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
+    <RadioStationGroup>
+      <Name>Cadena Ser</Name>
+      <Stations>
+        <RadioStation>
+          <Name>CS - Sevilla</Name>
+          <Url>http://194.169.201.177:8085/stream/prisacom_Sevilla</Url>
+          <Type>WMP</Type>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
+    <RadioStationGroup>
+      <Name>Cadena100</Name>
+      <Stations>
+        <RadioStation>
+          <Name>C100</Name>
+          <Url>http://cadena100.cope.stream.flumotion.com/cope/cadena100.flv.m3u</Url>
+          <Type>WMP</Type>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
+    <RadioStationGroup>
+      <Name>Europa FM</Name>
+      <Stations>
+        <RadioStation>
+          <Name>EFM</Name>
+          <Url>http://www.europafm.com/EuropaFM/swf/PlayerEFM-OSMF.swf?var1=http://www.antena3.com/player/europafm_streams.xml</Url>
+          <Type>FLASH</Type>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
+    <RadioStationGroup>
+      <Name>Los 40</Name>
+      <Stations>
+        <RadioStation>
+          <Name>40</Name>
+          <Url>http://player.streamtheworld.com/_players/unionradio/UnionRadio.swf?nocache=19%3A47%3A24%20GMT+0200%20%28Hora%20de%20verano%20romance%29&amp;streamid=3993&amp;callsign=LOS40</Url>
+          <Type>FLASH</Type>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
+    <RadioStationGroup>
+      <Name>MaximaFM</Name>
+      <Stations>
+        <RadioStation>
+          <Name>MaximaFM</Name>
+          <Url>http://player.streamtheworld.com/_players/unionradio/UnionRadio.swf?nocache=19%3A47%3A24%20GMT+0200%20%28Hora%20de%20verano%20romance%29</Url>
+          <Type>FLASH</Type>
         </RadioStation>
       </Stations>
     </RadioStationGroup>

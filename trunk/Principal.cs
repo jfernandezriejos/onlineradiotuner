@@ -19,9 +19,42 @@ namespace OnlineRadioTunner
 
             ContextMenu menu = BuildMenu(system);
 
+            // prueba elemento personalidad
+            /*MenuItem itm = new MenuItem("Custom Menu Item");
+            
+            itm.DrawItem += new DrawItemEventHandler(itm_DrawItem);
+            itm.OwnerDraw = true;
+            menu.MenuItems.Add(itm);*/
+            
             notIcon.ContextMenu = menu;
             notIcon.Visible = true;
+        }
 
+        
+        private void itm_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            // Cast the sender to MenuItem so you can access text property.
+            MenuItem customItem = (MenuItem)sender;
+
+            // Create a Brush and a Font to draw the MenuItem.
+            System.Drawing.Brush aBrush = System.Drawing.Brushes.DarkMagenta;
+            Font aFont = new Font("Garamond", 10,
+                FontStyle.Italic, GraphicsUnit.Point);
+
+            // Get the size of the text to use later to draw an ellipse
+            // around the item.
+            SizeF stringSize = e.Graphics.MeasureString(
+                customItem.Text, aFont);
+
+            // Draw the item and then draw the ellipse.
+            e.Graphics.DrawString(customItem.Text, aFont,
+                aBrush, e.Bounds.X, e.Bounds.Y);
+            e.Graphics.DrawEllipse(new Pen(System.Drawing.Color.Black, 2),
+                new Rectangle(e.Bounds.X, e.Bounds.Y,
+                (System.Int32)stringSize.Width,
+                (System.Int32)stringSize.Height));
+
+            //customItem.
         }
 
         private ContextMenu BuildMenu(OnlineRadioTunnerSystem system)
@@ -80,9 +113,14 @@ namespace OnlineRadioTunner
                 switch (rst.Type)
                 {
                     case StationType.WMP:
+                        flsh_player.Stop();
+                        flsh_player.Movie = "";
                         wMediaPlayer.URL = rst.Url;
+                        wMediaPlayer.Ctlcontrols.play();
                         break;
+
                     case StationType.FLASH:
+                        wMediaPlayer.Ctlcontrols.stop();
                         flsh_player.Movie = rst.Url;
                         flsh_player.Play();
                         break;
@@ -133,8 +171,7 @@ namespace OnlineRadioTunner
 
         private void flsh_player_OnReadyStateChange(object sender, AxShockwaveFlashObjects._IShockwaveFlashEvents_OnReadyStateChangeEvent e)
         {
-            int i = 0;
-            ++i;
+            //notIcon.ShowBalloonTip(1000, "Cargando emisora flash...", e.newState.ToString(), ToolTipIcon.Info);
         }
     }
 }
