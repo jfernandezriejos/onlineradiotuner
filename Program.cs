@@ -40,12 +40,12 @@ namespace OnlineRadioTunner
 			system.Groups.Add(group4);
             
             RadioStationGroup group5 = new RadioStationGroup("RNE");
-            group5.Stations.Add(new RadioStation("Radio Nacional", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3348_es_audios&location=radio&volume=0.75&autostart=true", StationType.WMP));
-            group5.Stations.Add(new RadioStation("Radio Clásica", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3343_es_audios&location=radio&volume=0.75&autostart=true", StationType.WMP));
-            group5.Stations.Add(new RadioStation("Radio 3", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3342_es_audios&location=radio&volume=0.75&autostart=true", StationType.WMP));
-            group5.Stations.Add(new RadioStation("Radio 4", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3344_es_audios&location=radio&volume=0.75&autostart=true", StationType.WMP));
-            group5.Stations.Add(new RadioStation("Radio 5 Todo Noticias", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3345_es_audios&location=radio&volume=0.75&autostart=true", StationType.WMP));
-            group5.Stations.Add(new RadioStation("Radio Exterior", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3346_es_audios&location=radio&volume=0.75&autostart=true", StationType.WMP));
+            group5.Stations.Add(new RadioStation("Radio Nacional", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3348_es_audios&location=radio&volume=0.75&autostart=true", StationType.FLASH));
+            group5.Stations.Add(new RadioStation("Radio Clásica", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3343_es_audios&location=radio&volume=0.75&autostart=true", StationType.FLASH));
+            group5.Stations.Add(new RadioStation("Radio 3", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3342_es_audios&location=radio&volume=0.75&autostart=true", StationType.FLASH));
+            group5.Stations.Add(new RadioStation("Radio 4", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3344_es_audios&location=radio&volume=0.75&autostart=true", StationType.FLASH));
+            group5.Stations.Add(new RadioStation("Radio 5 Todo Noticias", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3345_es_audios&location=radio&volume=0.75&autostart=true", StationType.FLASH));
+            group5.Stations.Add(new RadioStation("Radio Exterior", "http://www.rtve.es/swf/3.0.33/RTVEPlayer.swf?assetID=3346_es_audios&location=radio&volume=0.75&autostart=true", StationType.FLASH));
             system.Groups.Add(group5);
 
             RadioStationGroup group6 = new RadioStationGroup("Cadena Ser");
@@ -57,12 +57,16 @@ namespace OnlineRadioTunner
 			system.Groups.Add(group7);
 
             RadioStationGroup group8 = new RadioStationGroup("Europa FM");
-            group8.Stations.Add(new RadioStation("EFM", "http://www.europafm.com/EuropaFM/swf/PlayerEFM-OSMF.swf?var1=http://www.antena3.com/player/europafm_streams.xml", StationType.WMP));
+            group8.Stations.Add(new RadioStation("EFM", "http://www.europafm.com/EuropaFM/swf/PlayerEFM-OSMF.swf?var1=http://www.antena3.com/player/europafm_streams.xml", StationType.FLASH));
 			system.Groups.Add(group8);
 
             RadioStationGroup group9 = new RadioStationGroup("Los 40");
-            group9.Stations.Add(new RadioStation("40", " http://player.streamtheworld.com/_players/unionradio/?callsign=LOS40&streamid=3993&channelid=", StationType.FLASH));
+            group9.Stations.Add(new RadioStation("40", "http://player.streamtheworld.com/_players/unionradio/UnionRadio.swf?nocache=19%3A47%3A24%20GMT+0200%20%28Hora%20de%20verano%20romance%29&streamid=3993&callsign=LOS40", StationType.FLASH));
             system.Groups.Add(group9);
+
+            RadioStationGroup group10 = new RadioStationGroup("MaximaFM");
+            group10.Stations.Add(new RadioStation("MaximaFM", "http://player.streamtheworld.com/_players/unionradio/UnionRadio.swf?nocache=19%3A47%3A24%20GMT+0200%20%28Hora%20de%20verano%20romance%29", StationType.FLASH));
+            system.Groups.Add(group10);
 
             XmlSerializer serializer = new XmlSerializer(typeof(OnlineRadioTunnerSystem));
            
@@ -76,7 +80,7 @@ namespace OnlineRadioTunner
             r.Close();*/
 
             Principal pfrm = new Principal(system);
-            Application.Run(pfrm);
+            Application.Run();
         }
     }
 }
