@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C# Express 2008
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineRadioTunner", "OnlineRadioTunner.csproj", "{271C08E9-AE52-4D93-8BC9-5B56DD4883E1}"
 EndProject
 Global
