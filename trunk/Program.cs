@@ -20,7 +20,7 @@ namespace OnlineRadioTunner
             Application.SetCompatibleTextRenderingDefault(false);
 
             // PEQUEÑO TROZO DE CODIGO PARA SERIALIZAR LAS EMISORAS
-			OnlineRadioTunnerSystem system = new OnlineRadioTunnerSystem();
+			/*OnlineRadioTunnerSystem system = new OnlineRadioTunnerSystem();
             RadioStationGroup group = new RadioStationGroup("Onda Cero");
             group.Stations.Add(new RadioStation("OC - Sevilla", "mms://ondacerolivewm.fplive.net/ondacerowmlive-live/oc_sevilla", StationType.WMP));
             group.Stations.Add(new RadioStation("OC - Almeria", "mms://ondacerolivewm.fplive.net/ondacerowmlive-live/oc_almeria", StationType.WMP));
@@ -72,12 +72,12 @@ namespace OnlineRadioTunner
            
             StreamWriter w = new System.IO.StreamWriter("rstation.xml");
             serializer.Serialize(w, system);
-            w.Close();
+            w.Close();*/
 
-            /*XmlSerializer serializer = new XmlSerializer(typeof(OnlineRadioTunnerSystem));
+            XmlSerializer serializer = new XmlSerializer(typeof(OnlineRadioTunnerSystem));
             StreamReader r = new StreamReader("rstation.xml");
             OnlineRadioTunnerSystem system = (OnlineRadioTunnerSystem)serializer.Deserialize(r);
-            r.Close();*/
+            r.Close();
 
             Principal pfrm = new Principal(system);
             Application.Run();
