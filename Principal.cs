@@ -28,6 +28,7 @@ namespace OnlineRadioTunner
             
             notIcon.ContextMenu = menu;
             notIcon.Visible = true;
+            notIcon.Text = "Ninguna emisora activa";
         }
 
         
@@ -101,7 +102,7 @@ namespace OnlineRadioTunner
         private void wMediaPlayer_StatusChange(object sender, EventArgs e)
         {
             AxWMPLib.AxWindowsMediaPlayer wmp = (AxWMPLib.AxWindowsMediaPlayer)sender;
-            notIcon.ShowBalloonTip(10, "Emisora", wmp.status, ToolTipIcon.Info);
+            notIcon.ShowBalloonTip(10, "Emisora", "ORT - " + wmp.status, ToolTipIcon.Info);
         }
 
         private void change_radio_station(object sender, EventArgs e)
@@ -114,6 +115,7 @@ namespace OnlineRadioTunner
                 {
                     case StationType.WMP:
                         flsh_player.Stop();
+                        flsh_player.StopPlay();
                         flsh_player.Movie = "";
                         wMediaPlayer.URL = rst.Url;
                         wMediaPlayer.Ctlcontrols.play();
@@ -125,10 +127,13 @@ namespace OnlineRadioTunner
                         flsh_player.Play();
                         break;
                 }
+
+                notIcon.Text = "Emisora actual: " + rst.Name;
             }
             else
             {
                 MessageBox.Show("No se encontro la dirección de la emisora " + rst.Name, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                notIcon.Text = "Ninguna emisora activa";
             }
         }
 

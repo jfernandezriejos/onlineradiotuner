@@ -131,5 +131,16 @@
         </RadioStation>
       </Stations>
     </RadioStationGroup>
+
+    <RadioStationGroup>
+      <Name>Vaughan</Name>
+      <Stations>
+        <RadioStation>
+          <Name>Vaughan</Name>
+          <Url>http://vaughanradio.streaming-pro.com:8012/</Url>
+          <Type>WMP</Type>
+        </RadioStation>
+      </Stations>
+    </RadioStationGroup>
   </Groups>
 </OnlineRadioTunner>
