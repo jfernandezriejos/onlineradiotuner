@@ -81,6 +81,7 @@ namespace OnlineRadioTunner
 
             Principal pfrm = new Principal(system);
             Application.Run();
+
         }
     }
 }
